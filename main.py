@@ -11,17 +11,13 @@ con.commit()
 
 cursor.execute("SELECT * FROM people")
 print(cursor.fetchall())
-
 cursor.execute("SELECT * FROM people")
 for person in cursor.fetchall():
     print(f"{person[0]} - {person[1]} - {person[2]}")
-
 cursor.execute("SELECT * FROM people")
 print(cursor.fetchmany(3))
-
 cursor.execute("SELECT * FROM people")
 print(cursor.fetchone())
-
 cursor.execute("SELECT name,age FROM people WHERE id=3")
 name,age = cursor.fetchone()
 print(f"Name:{name}  Age:{age}")
